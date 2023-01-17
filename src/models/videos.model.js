@@ -26,6 +26,7 @@ const Videos = DB.define('videos', {
          id: 'id'
       }
    }
-});
+}, 
+{ timestamps: false });
 
 module.exports = Videos;

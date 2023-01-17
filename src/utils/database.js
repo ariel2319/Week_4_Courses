@@ -6,7 +6,8 @@ const db = new Sequelize({
    host: 'localhost',
    port: '2319',
    password: '23areilo23',
-   dialect: 'postgres'
+   dialect: 'postgres',
+   logging: false
 });
 
 module.exports = db;

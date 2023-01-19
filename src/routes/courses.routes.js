@@ -13,6 +13,6 @@ router.get('/course/:id/', getByIdWithCatandVideo);
 
 router.post('/course', createCourse); //OK
 
-router.put('/course/:id', updateCourse);
+router.put('/course/:id', updateCourse); //OK
 
 module.exports = router; 

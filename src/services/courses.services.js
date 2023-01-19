@@ -17,6 +17,14 @@ class CoursesServices {
          throw error;
       }
    }
+   static async update(field, id) {
+      try {
+         const result = await Courses.update(field, { where: { id } });
+         return result;
+      } catch (error) {
+         throw error;
+      }
+   }
 }
 
 module.exports = CoursesServices;

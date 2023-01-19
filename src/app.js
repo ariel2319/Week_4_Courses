@@ -1,15 +1,24 @@
 const express = require('express');
-const initModels = require('./models/initModel');
 const db = require('./utils/database');
+const initModels = require('./models/initModel');
+initModels();
 //Models =>
-
+const usersRoutes = require('./routes/users.routes');
+const videosRoutes = require('./routes/videos.routes');
+const catRoutes = require('./routes/categories.routes');
+const coursesRoutes = require('./routes/courses.routes');
 
 
 
 const app = express();
+const PORT = 8008;
+
 app.use(express.json());
 
-const PORT = 8008;
+app.use('/api/v1', usersRoutes);
+app.use('/api/v1', videosRoutes);
+app.use('/api/v1', catRoutes);
+app.use('/api/v1', coursesRoutes);
 
 db.authenticate()
    .then(() => console.log('*** Successfull authentication! :D ***'))

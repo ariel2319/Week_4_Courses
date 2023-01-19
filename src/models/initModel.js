@@ -22,6 +22,7 @@ const initModels = () => {
    // courses 1 - M videos
    Videos.belongsTo(Courses, { as: '', foreignKey: 'course_id' });
    Courses.hasMany(Videos, { as: '', foreignKey: 'course_id' });
+
 }
 
 module.exports = initModels;

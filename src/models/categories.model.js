@@ -13,7 +13,8 @@ const Categories = DB.define('categories', {
    name: {
       type: DataTypes.STRING,
       allowNull: false
-   }/* ,
+   },
+   /*
    courseCategories_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -23,6 +24,9 @@ const Categories = DB.define('categories', {
          key: 'id'
       }
    } */
+
+}, {
+   timestamps: false
 });
 
 module.exports = Categories;
